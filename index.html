@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자기소개 페이지</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <main id="app">
+
+        <section class="section-intro">
+            <header id="header">
+                <h1 class="txt-invisible">Portfolio</h1>
+                <nav>
+                    <ul class="nav-list">
+                        <li><a href="#Profile" class="list-link">profile</a></li>
+                        <li><a href="#About" class="list-link">About</a></li>
+                        <li><a href="#Further" class="list-link">Further</a></li>
+                        <li><a href="#Guestbook" class="list-link">Guest Book</a></li>
+                    </ul>
+                </nav>
+
+                <div class="bar-bg">
+                    <span class="bar-ing"></span>
+                </div>
+            </header>
+        </section>
+
+        <section id="Profile" class="profile">
+            <a name="profile"></a>
+            <div class="life">
+                <h2>Profile</h2>
+                <div class="profile-content">
+                    <div class="images">
+                        <img src="img/eunbi.JPG" alt="프로필 사진" class="life-img">
+                    </div>
+                    <div class="info">
+                        <dl class="details">
+                            <div>
+                                <dt>이름</dt>
+                                <dd>최은비</dd>
+                            </div>
+                            <div>
+                                <dt>생년월일</dt>
+                                <dd>04.06.06</dd>
+                            </div>
+                            <div>
+                                <dt>MBTI</dt>
+                                <dd>ISTJ</dd>
+                            </div>
+                            <div>
+                                <dt>거주지</dt>
+                                <dd>경기도 파주시</dd>
+                            </div>
+                            <div>
+                                <dt>형제관계</dt>
+                                <dd>1남 2녀 중 셋째</dd>
+                            </div>
+                            <div>
+                                <dt>학교/전공</dt>
+                                <dd>광운대학교/정보융합학부</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="About" class="about">
+            <a name="about"></a>
+            <div class="aboutMe">
+                <h2>About Me</h2>
+                <p class="click-text">(사진 클릭 시 페이지 이동)</p>
+                <div class="image-container">
+                    <a href="https://www.naver.com/" class="image-link">
+                        <img src="img/posiri.jpg" alt="강아지 사진" class="responsive-img">
+                        <dd class="overlay-text">반려동물</dd>
+                    </a>
+                </div>
+                <div class="image-container">
+                    <a href="../about/hobby/index.html" class="image-link">
+                        <img src="img/baseball1.jpg" alt="야구장 사진" class="responsive-img">
+                        <dd class="overlay-text">취미</dd>
+                    </a>
+                </div>
+                <div class="image-container">
+                    <a href="../about/food/index.html" class="image-link">
+                        <img src="img/food1.jpg" alt="음식 사진" class="responsive-img">
+                        <dd class="overlay-text">푸드</dd>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="Further" class="further">
+            <a name="further"></a>
+            <div class="container">
+                <h2>Further</h2>
+                <div class="timeline">
+                    <div class="timeline-item" data-year="2023">
+                        <h3>대학교 입학</h3>
+                        <p>광운대학교 정보융합학부 입학</p>
+                    </div>
+                    <div class="timeline-item" data-year="2025-2026">
+                        <h3>발전</h3>
+                        <p>인공지능 관련 연구 혹은 인턴십 참여</p>
+                    </div>
+                    <div class="timeline-item" data-year="2027">
+                        <h3>대학원 입학</h3>
+                        <p>인공지능 분야의 깊은 지식을 쌓기 위해 대학원에 입학</p>
+                    </div>
+                    <div class="timeline-item" data-year="2028-2030">
+                        <h3>프로젝트</h3>
+                        <p>관련 분야에서 중요한 프로젝트를 주도하고 업계에서 인정받는 전문가가 되기 위한 자기 발전</p>
+                    </div>
+                    <div class="timeline-item" data-year="2030">
+                        <h3>취업</h3>
+                        <p>인공지능 관련 전문 기업에 취업</p>
+                    </div>
+                    <div class="timeline-item" data-year="2031~">
+                        <h3>커뮤니티 기여</h3>
+                        <p>오픈 소스 프로젝트에 기여하고, 연구 결과를 발표하며 AI 커뮤니티에 적극적으로 참여</p>
+                    </div>
+                    <div class="timeline-item" data-year="장기적인 목표">
+                        <h3>트렌드</h3>
+                        <p>빠르게 변화하는 AI 기술과 트렌드를 익히고 새로운 도전을 수용하는 자세 기르기</p>
+                    </div>
+                </div>
+        </section>
+
+        </section>
+
+        <section id="Guestbook" class="guestbook">
+            <a name="guestbook"></a>
+            <div class="Guestbook">
+                <h2>Guest Book</h2>
+                <form id="guestbookForm">
+                    <input type="text" id="authorInput" placeholder="작성자" required>
+                    <textarea id="messageInput" placeholder="내용" required></textarea>
+                    <button type="submit">작성</button>
+                </form>
+                <div id="guestbookEntries"></div>
+        </section>
+
+        <footer>
+            <p>© 2024 자기소개 페이지</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

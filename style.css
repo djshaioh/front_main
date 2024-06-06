@@ -1,0 +1,442 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap");
+
+/* body */
+body {
+  padding-top: 150px;
+  margin: 0;
+  padding: 0;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* header */
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 15px 60px;
+  background-color: white;
+  color: #4caf50;
+  font-size: 18px;
+  z-index: 10;
+}
+
+.profile {
+  background-color: rgb(239, 249, 233);
+  padding: 50px 20px;
+}
+
+.profile h2 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: #4caf50;
+  margin-top: 200px;
+}
+
+.project {
+  background-color: #e0e0e0;
+  color: #444;
+}
+
+.contact {
+  background-color: #d0d0d0;
+  color: #333;
+}
+
+.profile,
+.contact {
+  color: #333;
+}
+
+/* 내비게이션 스타일 */
+.nav-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: right;
+  margin: 0;
+}
+
+.nav-list li {
+  margin: 0 15px;
+}
+
+.list-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+
+.list-link:hover {
+  color: #4caf50;
+}
+
+/* 진행 바 스타일 */
+.bar-bg {
+  position: relative;
+  background-color: #e0e0e0;
+  height: 5px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.bar-ing {
+  display: block;
+  background-color: #4caf50;
+  height: 100%;
+  width: 0%;
+}
+
+/* 프로필 이미지 스타일 */
+.life-img {
+  display: block;
+  margin-right: 20px;
+  border-radius: 10px; /* 테두리를 둥글게 설정 */
+  width: 350px;
+  height: 400px;
+  object-fit: cover;
+  border: 3px solid #4caf50; /* 테두리 추가 */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* 그림자 효과 추가 */
+}
+
+/* 텍스트 컨텐츠 스타일 */
+.text-content {
+  overflow: hidden; /* 이미지와 텍스트 영역이 겹치지 않도록 */
+}
+
+.project-title {
+  font-size: 10px;
+  color: #4caf50; /* 텍스트 색상 */
+  margin-top: 0;
+  margin-bottom: 10px;
+  border: 2px solid #4caf50; /* 테두리 색상 및 두께 */
+  border-radius: 20px; /* 테두리를 둥글게 설정 */
+  background-color: #e0f2f1; /* 텍스트 영역 배경색 */
+  padding: 10px; /* 내부 여백 추가 */
+  display: inline-block; /* 박스가 텍스트에 따라 크기가 조정되도록 설정 */
+}
+
+.greeting {
+  font-size: 36px;
+  color: #333; /* 텍스트 색상 */
+  margin-top: 0;
+  margin-bottom: 20px;
+  border: 2px solid #333; /* 테두리 색상 및 두께 */
+  border-radius: 20px; /* 테두리를 둥글게 설정 */
+  background-color: #f5f5f5; /* 텍스트 영역 배경색 */
+  padding: 20px; /* 내부 여백 추가 */
+  display: inline-block; /* 박스가 텍스트에 따라 크기가 조정되도록 설정 */
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.images {
+  margin-right: 20px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.details {
+  margin-bottom: 20px;
+}
+
+.details div {
+  margin-bottom: 10px;
+}
+
+.aboutMe,
+.personality {
+  margin-top: 20px;
+}
+
+.details dt {
+  display: inline-block;
+  font-weight: bold; /* 제목을 굵게 표시 */
+  margin-bottom: 5px;
+  width: 110px;
+  font-size: 25px;
+  font-family: "GmarketBold";
+  color: #4caf50;
+}
+
+.details dd {
+  display: inline-block;
+  font-size: 20px;
+}
+
+.about .aboutMe {
+  padding: 50px 20px;
+  background-color: white;
+  text-align: center;
+}
+
+.about .aboutMe h2 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: #4caf50;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.about .aboutMe img {
+  display: block;
+  margin-right: 20px;
+  border-radius: 10px; /* 테두리를 둥글게 설정 */
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 3px solid #4caf50; /* 테두리 추가 */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* 그림자 효과 추가 */
+}
+
+/* 이미지 위에 텍스트를 추가하는 CSS */
+.image-container {
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+}
+
+.image-link {
+  display: block;
+  position: relative;
+}
+
+.image-link img {
+  width: 500px;
+  height: 500px;
+  display: block;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-75%, -50%);
+  color: white;
+  font-size: 20px; /* 원하는 크기로 조절 */
+  font-weight: bold;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); /* 반투명 배경 */
+  padding: 10px; /* 위아래, 좌우 여백 추가 */
+  border-radius: 5px;
+  pointer-events: none; /* 클릭 이벤트가 텍스트에 의해 차단되지 않도록 설정 */
+  width: 180px; /* 원하는 사진의 너비로 조정 */
+  height: 180px; /* 원하는 사진의 높이로 조정 */
+}
+
+.click-text {
+  position: absolute;
+  bottom: -225px; /* 이미지 아래에 위치하도록 조정 */
+  left: 50%;
+  transform: translateX(-50%);
+  color: black;
+  padding: 10px;
+  font-size: 10px;
+}
+
+.profile-content {
+  display: flex;
+  align-items: center;
+}
+
+.images {
+  margin-right: 20px;
+}
+
+.info {
+  flex-grow: 1;
+}
+
+.further {
+  background-color: rgb(239, 249, 233);
+  padding: 50px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.further h2 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: #4caf50;
+  margin-top: 50px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline {
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  background-color: #4caf50;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 10px 40px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  overflow-wrap: break-word; /* 긴 단어가 박스 밖으로 나가지 않도록 줄바꿈합니다 */
+  word-wrap: break-word; /* 긴 단어가 박스 밖으로 나가지 않도록 줄바꿈합니다 */
+  white-space: normal; /* 텍스트가 자동으로 줄바꿈되도록 합니다 */
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+.timeline-item::before {
+  content: attr(data-year);
+  position: absolute;
+  top: -10px;
+  left: calc(50% + 4px);
+  background-color: #4caf50;
+  color: white;
+  padding: 2px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+.timeline-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.timeline-item.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Guestbook section styles */
+.guestbook {
+  margin-top: 50px; /* "방명록" 위에 여백 추가 */
+  padding: 50px 20px; /* 좌우에만 20px의 패딩 추가 */
+  max-width: 800px; /* 최대 너비 설정 */
+  margin: 0 auto; /* 가운데 정렬을 위해 auto 마진 추가 */
+  background-color: white; /* 섹션 배경색을 화이트로 지정 */
+}
+
+.guestbook h2 {
+  margin-top: 50px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #4caf50;
+  text-align: center;
+}
+
+#guestbookForm {
+  margin-bottom: 20px;
+  max-width: 100%; /* 원하는 최대 너비로 조정 */
+  margin: 0 auto; /* 가운데 정렬을 위해 auto 마진 추가 */
+}
+
+#guestbookForm input[type="text"],
+#guestbookForm textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#guestbookForm button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#guestbookForm button:hover {
+  background-color: #45a049;
+}
+
+.guestbook-entry {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.guestbook-entry p {
+  margin: 5px 0;
+}
+
+.guestbook-entry button {
+  padding: 5px 10px;
+  background-color: #ff5555;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.guestbook-entry button:hover {
+  background-color: #ff3333;
+}
+
+/* Responsive styling for smaller screens */
+@media screen and (max-width: 768px) {
+  #guestbookForm input[type="text"],
+  #guestbookForm textarea {
+    width: calc(100% - 20px); /* Adjust input width for smaller screens */
+  }
+}
+
+footer {
+  background-color: #4caf50;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  margin-top: 50px;
+}
+
+footer p {
+  text-align: center;
+  padding: 40px;
+  margin: 0;
+}

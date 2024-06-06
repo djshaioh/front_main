@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../fast"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "self-introduction"
+	}
+}
