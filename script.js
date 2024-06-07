@@ -1,5 +1,7 @@
+// 방명록 항목 배열
 let guestbookEntries = [];
 
+// 방명록 항목을 렌더링하는 함수
 function renderGuestbookEntries() {
     const guestbookEntriesContainer = document.getElementById('guestbookEntries');
     guestbookEntriesContainer.innerHTML = '';
@@ -21,7 +23,7 @@ function renderGuestbookEntries() {
     });
 }
 
-// Function to handle form submission
+// 폼 제출 이벤트를 처리하는 함수
 document.getElementById('guestbookForm').addEventListener('submit', function (event) {
     event.preventDefault();
     const authorInput = document.getElementById('authorInput').value;
@@ -35,20 +37,22 @@ document.getElementById('guestbookForm').addEventListener('submit', function (ev
     };
     guestbookEntries.push(newEntry);
     renderGuestbookEntries();
-    // Clear form inputs after submission
+    // 제출 후 폼 입력란 초기화
     document.getElementById('authorInput').value = '';
     document.getElementById('messageInput').value = '';
 });
 
-// Function to handle entry deletion
+// 방명록 항목 삭제 함수
 function deleteEntry(id) {
     guestbookEntries = guestbookEntries.filter(entry => entry.id !== id);
     renderGuestbookEntries();
 }
 
+// 페이지 로드 시 방명록 항목 렌더링
 document.addEventListener('DOMContentLoaded', function () {
     renderGuestbookEntries();
 
+    // 프로그레스 바
     const progressBar = document.querySelector('.bar-ing');
     const header = document.querySelector('#header');
     const sections = document.querySelectorAll('section');
@@ -63,9 +67,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     window.addEventListener('scroll', updateProgressBar);
-});
 
-document.addEventListener("DOMContentLoaded", function () {
+    // 타임라인
     let observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
